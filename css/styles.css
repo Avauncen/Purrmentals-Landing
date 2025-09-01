@@ -1,0 +1,83 @@
+:root{
+  --bg: #FFF8F3;
+  --bg-ink: #1E1B26;
+  --card: #FFFFFF;
+  --muted: #6B6478;
+  --primary: #FF6BA6; /* Purr Pink */
+  --secondary: #24D1C4; /* Electric Teal */
+  --accent: #FFC857; /* Sunshine Gold */
+  --indigo: #3B2E5A;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
+
+  /* Element token colors */
+  --el-fire: #FF6B6B;
+  --el-water: #4FC3F7;
+  --el-nature: #57C785;
+  --el-electric: #FFD166;
+  --el-earth: #B08968;
+  --el-air: #A8E0FF;
+  --el-shadow: #6D5BA7;
+  --el-crystal: #80DEEA;
+  --el-mythic: #EF84FF;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font: 16px/1.5 "Quicksand", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--bg-ink);
+  background: radial-gradient(1200px 600px at 10% -10%, #FFE7EF 0%, transparent 60%) no-repeat var(--bg);
+}
+
+.container{max-width:1080px;margin:0 auto;padding:clamp(16px,4vw,32px)}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:16px;top:16px;width:auto;height:auto;background:#000;color:#fff;padding:8px 12px;border-radius:8px}
+
+.site-header{position:sticky;top:0;background:rgba(255,255,255,.7);backdrop-filter: blur(8px);border-bottom:1px solid #f0e8f2}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;font-family:"Nunito", system-ui, sans-serif}
+.brand img{height:40px;width:auto}
+.wordmark{font-weight:800;font-size:1.25rem;letter-spacing:.5px}
+
+.site-nav button{
+  background:var(--card);border:1px solid #eee;border-radius:999px;padding:8px 12px;cursor:pointer;
+  box-shadow:var(--shadow)
+}
+
+.hero{text-align:center;padding-top:48px;padding-bottom:16px}
+.hero h1{font-family:"Nunito", system-ui, sans-serif;font-weight:800;font-size:clamp(2rem,5vw,3rem);margin:0 0 8px}
+.tagline{max-width:800px;margin:0 auto 24px;color:var(--muted)}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta{
+  display:inline-block;background:linear-gradient(135deg,var(--primary),#ff89b8);
+  color:white;text-decoration:none;padding:12px 18px;border-radius:999px;font-weight:700;box-shadow:var(--shadow)
+}
+.cta.ghost{background:#fff;color:var(--indigo);border:1px solid #eee}
+
+.privacy-note{font-size:.9rem;color:var(--muted)}
+
+.features h2,.elements h2,.signup h2{font-family:"Nunito", system-ui, sans-serif;font-weight:800;margin-top:16px}
+.grid{list-style:none;padding:0;margin:24px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.grid li{
+  background:var(--card);padding:16px;border-radius:var(--radius);box-shadow:var(--shadow);
+  border:1px solid #f4eaf5
+}
+
+.elements .pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.pill{--bg:#eee;display:inline-block;padding:8px 12px;border-radius:999px;background:var(--bg);color:#000A;box-shadow:var(--shadow)}
+
+.signup .email-form{display:flex;gap:12px;flex-wrap:wrap;align-items:end;margin-top:8px}
+.email-form input{padding:10px 12px;border:1px solid #ddd;border-radius:12px;min-width:240px}
+.email-form button{border:0}
+
+.site-footer{border-top:1px solid #f0e8f2;background:#fff}
+.site-footer .container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.site-footer .social{list-style:none;display:flex;gap:12px;padding:0;margin:0}
+.site-footer .social a{text-decoration:none;color:var(--indigo);font-weight:700}
+
+@media (prefers-color-scheme: dark){
+  :root{--bg:#14121A;--bg-ink:#F4F1F7;--card:#181624;--muted:#B9B3C6;--indigo:#D5C9FF}
+  body{background: radial-gradient(1200px 600px at 10% -10%, #30223b 0%, transparent 60%) no-repeat var(--bg);}
+  .cta.ghost{background:transparent;color:white;border-color:#3a3247}
+}

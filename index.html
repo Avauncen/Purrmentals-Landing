@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Purrmentals — Collect, Breed & Play</title>
+  <meta name="description" content="Purrmentals is a cozy, family-friendly mobile game about collecting, breeding, and raising elemental kittens." />
+  <meta property="og:title" content="Purrmentals — Collect, Breed & Play" />
+  <meta property="og:description" content="A cozy elemental cat adventure. Fully playable without ads in Kid Mode." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#FF6BA6" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <!-- Friendly rounded display faces -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Purrmentals logo: a cat silhouette with elemental spark" />
+        <span class="wordmark" aria-label="Purrmentals">Purrmentals</span>
+      </div>
+      <nav class="site-nav" aria-label="Primary">
+        <button id="themeToggle" aria-pressed="false" aria-label="Toggle theme">🌗</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container">
+      <h1>Collect, Breed &amp; Play</h1>
+      <p class="tagline">A cozy elemental cat adventure for families — with an optional <strong>Kid Mode</strong> that disables ads and purchases.</p>
+      <div class="cta-row">
+        <a class="cta" href="mailto:hello@purrmentals.com?subject=Purrmentals%20Updates&body=Please%20add%20me%20to%20the%20update%20list.">Notify me</a>
+        <a class="cta ghost" href="#features">Learn more</a>
+      </div>
+      <p class="privacy-note">No tracking. We’ll never sell or share your data.</p>
+    </section>
+
+    <section id="features" class="features container">
+      <h2>Why families love Purrmentals</h2>
+      <ul class="grid">
+        <li>
+          <h3>Kid‑safe by design</h3>
+          <p>Kid Mode disables ads, in‑app purchases, public chat, and stranger social. A parent PIN is required to change settings.</p>
+        </li>
+        <li>
+          <h3>Play offline</h3>
+          <p>Travel‑friendly fun. Everything works offline and syncs securely when you’re back online.</p>
+        </li>
+        <li>
+          <h3>Ethical free‑to‑play</h3>
+          <p>Rewarded ads are optional. Clear odds. No pressure timers or buy‑or‑lose copy.</p>
+        </li>
+        <li>
+          <h3>Friends‑only</h3>
+          <p>Invite Game Center friends to visit and tap helpful power‑ups — no public matchmaking.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="elements container">
+      <h2>Elemental kittens</h2>
+      <p>Discover Fire, Water, Nature, Electric, Earth, Air, Shadow, Crystal, and Mythic varieties.</p>
+      <div class="pill-row" role="list" aria-label="Element palette">
+        <span role="listitem" class="pill" style="--bg: var(--el-fire)">Fire</span>
+        <span role="listitem" class="pill" style="--bg: var(--el-water)">Water</span>
+        <span role="listitem" class="pill" style="--bg: var(--el-nature)">Nature</span>
+        <span role="listitem" class="pill" style="--bg: var(--el-electric)">Electric</span>
+        <span role="listitem" class="pill" style="--bg: var(--el-earth)">Earth</span>
+        <span role="listitem" class="pill" style="--bg: var(--el-air)">Air</span>
+        <span role="listitem" class="pill" style="--bg: var(--el-shadow)">Shadow</span>
+        <span role="listitem" class="pill" style="--bg: var(--el-crystal)">Crystal</span>
+        <span role="listitem" class="pill" style="--bg: var(--el-mythic)">Mythic</span>
+      </div>
+    </section>
+
+    <section class="signup container">
+      <h2>Be first to play</h2>
+      <p>We’re crafting a gentle, beautiful world for all ages. Join the early access list:</p>
+      <form class="email-form" action="mailto:hello@purrmentals.com" method="post" enctype="text/plain">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+        <button class="cta" type="submit">Request invite</button>
+      </form>
+      <p class="small">By sending, you agree to be contacted about Purrmentals. No spam, ever.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Purrmentals. All rights reserved.</small>
+      <ul class="social">
+        <li><a href="https://x.com/purrmentals" aria-label="Twitter">X</a></li>
+        <li><a href="https://www.instagram.com/purrmentals" aria-label="Instagram">IG</a></li>
+        <li><a href="https://www.youtube.com/@purrmentals" aria-label="YouTube">YT</a></li>
+        <li><a href="https://www.tiktok.com/@purrmentals" aria-label="TikTok">TT</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
