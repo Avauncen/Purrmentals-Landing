@@ -1,26 +1,19 @@
-# Purrmentals — Landing Page (Draft)
+# Purrmentals — Static Site + Press Kit
 
-A lightweight, static landing page you can deploy to any static host (GitHub Pages, Netlify, Vercel).
+**How to use (VS Code)**
+1. Open folder in VS Code.
+2. (Optional) Install *Live Server* → “Go Live” to preview.
+3. Deploy to GitHub Pages (workflow included), Netlify, or Vercel.
 
-## Quick start
-1. Open this folder in **VS Code**.
-2. Install the **Live Server** extension (optional) and click “Go Live” to preview.
-3. Edit `index.html`, `css/styles.css`, and `js/main.js` as needed.
-4. Deploy:
-   - **GitHub Pages**: push to a repo, enable Pages for the main branch.
-   - **Vercel/Netlify**: import the repo, framework = None, output dir = `/`.
-
-## Privacy-first
-- No trackers. Email signup uses a `mailto:` form by default; replace with your provider (Buttondown, ConvertKit, Brevo, etc.) when ready.
+## Replace email capture
+Swap the `mailto:` with Buttondown/Brevo/ConvertKit form when ready.
 
 ## Files
-- `index.html` — the page
-- `css/styles.css` — theme and tokens (CSS variables)
-- `js/main.js` — small enhancements
-- `assets/logo.svg` — simple vector logo
-- `assets/og-image.png` — social preview image
-- `manifest.webmanifest`, `robots.txt` — PWA + SEO basics
+- `index.html`, `privacy.html`, `terms.html`
+- `/press` — mini press kit
+- `/assets` — icons & social cards
+- `.github/workflows/deploy.yml` — GitHub Pages deploy
 
----
 
-© Purrmentals. All rights reserved.
+## Shared Design Tokens
+See `design-tokens.json` for colors, typography, rarity labels. This file is source-of-truth shared with Unity project.

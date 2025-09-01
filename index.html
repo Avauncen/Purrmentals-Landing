@@ -6,25 +6,51 @@
   <title>Purrmentals — Collect, Breed & Play</title>
   <meta name="description" content="Purrmentals is a cozy, family-friendly mobile game about collecting, breeding, and raising elemental kittens." />
   <meta property="og:title" content="Purrmentals — Collect, Breed & Play" />
-  <meta property="og:description" content="A cozy elemental cat adventure. Fully playable without ads in Kid Mode." />
+  <meta property="og:description" content="A cozy elemental cat adventure. Fully playable offline; Kid Mode disables ads and purchases." />
   <meta property="og:image" content="assets/og-image.png" />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#FF6BA6" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Purrmentals — Collect, Breed & Play" />
+  <meta name="twitter:description" content="A cozy elemental cat adventure. Fully playable offline; Kid Mode disables ads and purchases." />
+  <meta name="twitter:image" content="assets/og-image.png" />
+  <meta property="og:url" content="https://purrmentals.com/" />
+  <link rel="canonical" href="https://purrmentals.com/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" />
+  <link rel="icon" href="assets/favicon-16.png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <!-- Friendly rounded display faces -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Purrmentals",
+    "url": "https://purrmentals.com/",
+    "description": "Collect, breed, and raise elemental kittens in a cozy, family-first mobile game.",
+    "operatingSystem": "iOS",
+    "applicationCategory": "Game",
+    "genre": ["Simulation", "Family"],
+    "publisher": {"@type":"Organization","name":"Purrmentals"},
+    "dateCreated": "2025-09-01T04:39:47.004852"
+  }
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="container">
-      <div class="brand">
-        <img src="assets/logo.svg" alt="Purrmentals logo: a cat silhouette with elemental spark" />
-        <span class="wordmark" aria-label="Purrmentals">Purrmentals</span>
-      </div>
+      <a class="brand" href="index.html" aria-label="Purrmentals home">
+        <img src="assets/logo.svg" alt="Purrmentals logo" />
+        <span class="wordmark">Purrmentals</span>
+      </a>
       <nav class="site-nav" aria-label="Primary">
+        <a href="press/index.html">Press</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
         <button id="themeToggle" aria-pressed="false" aria-label="Toggle theme">🌗</button>
       </nav>
     </div>
@@ -35,7 +61,7 @@
       <h1>Collect, Breed &amp; Play</h1>
       <p class="tagline">A cozy elemental cat adventure for families — with an optional <strong>Kid Mode</strong> that disables ads and purchases.</p>
       <div class="cta-row">
-        <a class="cta" href="mailto:hello@purrmentals.com?subject=Purrmentals%20Updates&body=Please%20add%20me%20to%20the%20update%20list.">Notify me</a>
+        <a class="cta" href="#signup">Notify me</a>
         <a class="cta ghost" href="#features">Learn more</a>
       </div>
       <p class="privacy-note">No tracking. We’ll never sell or share your data.</p>
@@ -50,7 +76,7 @@
         </li>
         <li>
           <h3>Play offline</h3>
-          <p>Travel‑friendly fun. Everything works offline and syncs securely when you’re back online.</p>
+          <p>Travel‑friendly. Everything works offline and syncs securely with iCloud when you’re back online.</p>
         </li>
         <li>
           <h3>Ethical free‑to‑play</h3>
@@ -58,7 +84,7 @@
         </li>
         <li>
           <h3>Friends‑only</h3>
-          <p>Invite Game Center friends to visit and tap helpful power‑ups — no public matchmaking.</p>
+          <p>Invite Game Center friends to tap helpful power‑ups — no public matchmaking, no chat.</p>
         </li>
       </ul>
     </section>
@@ -79,26 +105,48 @@
       </div>
     </section>
 
-    <section class="signup container">
+    <section id="signup" class="signup container">
       <h2>Be first to play</h2>
       <p>We’re crafting a gentle, beautiful world for all ages. Join the early access list:</p>
-      <form class="email-form" action="mailto:hello@purrmentals.com" method="post" enctype="text/plain">
+      <form class="email-form" name="notify" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+        <input type="hidden" name="form-name" value="notify" />
+        <p style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
         <label for="email">Email</label>
         <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+        <div data-netlify-recaptcha="true"></div>
         <button class="cta" type="submit">Request invite</button>
       </form>
       <p class="small">By sending, you agree to be contacted about Purrmentals. No spam, ever.</p>
     </section>
+  
+    <section class="features container">
+      <h2>Family Pass</h2>
+      <ul class="grid">
+        <li>
+          <h3>Parent‑shared benefits</h3>
+          <p>Parents can share the Season Pass with linked kid accounts. Claims require Kid Mode and an internet connection.</p>
+        </li>
+        <li>
+          <h3>Kid Mode guardrails</h3>
+          <p>Pass access pauses instantly if Kid Mode is turned off on the child account. No purchase prompts appear on kid devices.</p>
+        </li>
+        <li>
+          <h3>Fair & transparent</h3>
+          <p>One claim per tier per kid. No loot boxes or hidden odds.</p>
+        </li>
+      </ul>
+    </section>
+        
   </main>
 
   <footer class="site-footer">
     <div class="container">
       <small>© <span id="year"></span> Purrmentals. All rights reserved.</small>
       <ul class="social">
-        <li><a href="https://x.com/purrmentals" aria-label="Twitter">X</a></li>
-        <li><a href="https://www.instagram.com/purrmentals" aria-label="Instagram">IG</a></li>
-        <li><a href="https://www.youtube.com/@purrmentals" aria-label="YouTube">YT</a></li>
-        <li><a href="https://www.tiktok.com/@purrmentals" aria-label="TikTok">TT</a></li>
+        <li><a href="https://x.com/purrmentals" aria-label="Twitter" title="Twitter — @purrmentals">X</a></li>
+        <li><a href="https://www.instagram.com/purrmentals" aria-label="Instagram" title="Instagram — @purrmentals">IG</a></li>
+        <li><a href="https://www.youtube.com/@purrmentals" aria-label="YouTube" title="YouTube — @purrmentals">YT</a></li>
+        <li><a href="https://www.tiktok.com/@purrmentals" aria-label="TikTok" title="TikTok — @purrmentals">TT</a></li>
       </ul>
     </div>
   </footer>

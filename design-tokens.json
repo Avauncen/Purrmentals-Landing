@@ -1,0 +1,42 @@
+{
+  "colors": {
+    "primary": "#FF6BA6",
+    "secondary": "#24D1C4",
+    "accent": "#FFC857",
+    "backgroundLight": "#FFF8F3",
+    "backgroundDark": "#14121A",
+    "inkLight": "#1E1B26",
+    "inkDark": "#F4F1F7",
+    "mutedLight": "#6B6478",
+    "mutedDark": "#B9B3C6"
+  },
+  "elements": {
+    "fire": "#FF6B6B",
+    "water": "#4FC3F7",
+    "nature": "#57C785",
+    "electric": "#FFD166",
+    "earth": "#B08968",
+    "air": "#A8E0FF",
+    "shadow": "#6D5BA7",
+    "crystal": "#80DEEA",
+    "mythic": "#EF84FF"
+  },
+  "typography": {
+    "heading": "Nunito",
+    "body": "Quicksand",
+    "fallback": "system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"
+  },
+  "shapes": {
+    "radius": 16,
+    "shadow": "0 10px 30px rgba(0,0,0,.08)"
+  },
+  "rarities": {
+    "common": "#CCCCCC",
+    "uncommon": "#57C785",
+    "rare": "#4FC3F7",
+    "epic": "#6D5BA7",
+    "legendary": "#FFC857",
+    "mythic": "#EF84FF",
+    "uniqueSeasonal": "#FF6BA6"
+  }
+}
